@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Sedgwick+Ave);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.header-icons {
+  font-size: 40px;
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+}
+
+.header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+.ninety {
+  width: 90%;
+}
+
+.italic {
+  font-style: italic;
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cities-circle {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filterContainer {
+  display: flex;
+  align-items: baseline;
+  height: 40px;
+  margin-top: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+input[type=text] {
+  border: 2px solid #cacaca;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+input::placeholder {
+  text-align: center;
+  color: #aaa9a9;
+}
+
+.cityItem {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 8px;
+} 
+
+.extraMargin {
+  margin-bottom: 52px;
+}
+
+.extraMarginTop {
+  margin-top: 68px;
+}
+
+.cityButton {
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  height: 160px;
+  margin-top: 8px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+.cityButtonTitle {
+  font-weight: bold;
+  color: #FFFFFF;  
+  font-family: 'Satisfy';
+  font-size: 40px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.842), -1px -1px 8px rgba(0, 0, 0, 0.842);
+  margin-top: 60px;
+}
+
+.cityButtonCountry {
+  font-weight: bold;
+  color: #FFFFFF;  
+  font-family: 'Roboto';
+  font-size: 16px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.842), -1px -1px 8px rgba(0, 0, 0, 0.842);
+  margin-top: -8px;
+}
+
+.cardMargin {
+  margin-bottom: 0px;
+}
+
+.card-panel {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 40px;
+}
