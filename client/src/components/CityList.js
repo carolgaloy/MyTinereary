@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
 import CityItem from './CityItem.js';
 
 class CityList extends Component {
@@ -8,10 +7,9 @@ class CityList extends Component {
         
         if (this.props.cities[0] === "NoCities") {
             return (
-                <div>
-                    <ul className='cityButtons'>
-                        <li key='NoCities'><p className='noCities'>No cities found</p></li>
-                    </ul>
+                <div className='noCities'>
+                    <i className="material-icons header-icons">error_outline</i>
+                    <p className='text'>No cities found</p>                    
                 </div>                
             );
 
@@ -20,14 +18,12 @@ class CityList extends Component {
             return (
                 <div className='extraMargin'>
                     {
-                        this.props.cities.map(city => (
-                            <CityItem city={city} />))
+                    this.props.cities.map(city => (
+                        <CityItem city={city} key={city.name}/>))
                     }
                 </div>
             );
         }
-
-        
     }    
 }
 

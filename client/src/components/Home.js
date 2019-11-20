@@ -7,7 +7,7 @@ import circle from '../img/circled-right-2.png';
 class Home extends Component {
     render() {
         return (
-            <div className='centered'>
+            <div className='centered extraMarginTop'>
                 <img src={logo} alt='mytinerary logo' className='ninety' />
                 <p className='italic ninety'>Find your perfect trip, designed by insiders who know and love their cities</p>
                 <Link to="/cities"><img src={circle} alt='Go To Cities' className='cities-circle' /></Link>
