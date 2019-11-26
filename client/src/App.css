@@ -106,6 +106,11 @@ input::placeholder {
   margin-top: 68px;
 }
 
+.extraMarginSides {
+  margin-left: 8px;
+  margin-right:8px;
+}
+
 .cityButton {
   list-style: none;
   text-align: center;
@@ -134,6 +139,13 @@ input::placeholder {
   margin-top: -8px;
 }
 
+.city-title {
+  font-weight: bold;
+  font-family: 'Satisfy';
+  font-size: 40px;
+  text-align: center;
+}
+
 .cardMargin {
   margin-bottom: 0px;
 }
@@ -152,3 +164,70 @@ input::placeholder {
 .text {
   font-size: 20px;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-characteristics {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.fixed-width {
+  width: 88px;
+}
+
+.card.horizontal .card-image {
+  margin-left: 8px;
+  margin-top: 16px;
+  width: 72px;
+}
+
+.card-pic {
+  height: 72px;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  
+}
+
+.card .dropdown {
+  padding: 4px 16px;
+  text-align: right;
+}
+
+.card .card-content {
+  padding: 8px;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: #8b8b8b;
+  margin-right: 0px;
+}
+
+.img-subtitle p {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.no-style {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+}
+/* 
+.activity-list {
+  display: none;
+} */

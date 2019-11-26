@@ -19,7 +19,7 @@ class Cities extends Component {
     }
 	
 	filterCities = cityFilter => {
-		let filteredCities = this.props.cityList.payload;
+		let filteredCities = this.props.cityList;
 		filteredCities = filteredCities.filter(city => {
 		  	let cityName = city.name.toLowerCase();
 		  	return cityName.startsWith(cityFilter.toLowerCase());
@@ -36,7 +36,7 @@ class Cities extends Component {
 	
 
     render() { 
-		let cities = this.props.cityList.payload;
+		let cities = this.props.cityList;
 
 		if (this.state.filteredCities.length !== 0){
             cities = this.state.filteredCities;
@@ -61,7 +61,7 @@ class Cities extends Component {
 const mapStateToProps = state => {
     return {
         //now this.props.cities will be the cities state object
-        cityList: state.cities
+        cityList: state.cities.payload
     };
 };
   

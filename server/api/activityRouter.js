@@ -16,8 +16,8 @@ router.get('/all',
 // Get all activities for a specific city
 router.get('/:id',
 	(req, res) => {
-        let itineraryRequested = req.params.id;
-  		activityModel.find({ itineraryId: itineraryRequested })
+        let cityRequested = req.params.id;
+  		activityModel.find({ cityId: cityRequested })
 			.then(activities => {
 				res.send(activities);
 			})
@@ -29,6 +29,7 @@ router.post('/', (req, res) => {
     const newActivity = new activityModel({
         name: req.body.name,
         itineraryId: req.body.itineraryId,
+        cityId: req.body.cityId,
         address: req.body.address,
         photo: req.body.photo,
         duration: req.body.duration,

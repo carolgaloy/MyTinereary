@@ -10,6 +10,10 @@ const activitySchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    cityId: {
+        type: String,
+        required: true
+    },
     address: {
         type: String
     },
