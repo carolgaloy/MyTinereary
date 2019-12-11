@@ -6,7 +6,6 @@ class ItineraryList extends Component {
 
     componentDidMount() {
         var collapsible = document.querySelectorAll('.collapsible');
-        console.log(collapsible);
 		M.Collapsible.init(collapsible, {});
     }
 

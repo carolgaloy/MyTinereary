@@ -37,7 +37,6 @@ class Itineraries extends Component {
 			);
 
         } else {
-			console.log(this.props);
 			return (
 				<div className='extraMargin extraMarginTop extraMarginSides'>
                     <h3 className='city-title'>{this.state.city.name}</h3>

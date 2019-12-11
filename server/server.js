@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 const cityRouter = require("./api/cityRouter");
 const itineraryRouter = require("./api/itineraryRouter");
 const activityRouter = require("./api/activityRouter");
+const userRouter = require("./api/userRouter");
+const loginRouter = require("./api/loginRouter");
 
 // Initialize Express
 const app = express();
@@ -33,6 +35,8 @@ mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTo
 app.use("/cities", cityRouter);
 app.use("/itineraries", itineraryRouter);
 app.use("/activities", activityRouter);
+app.use("/users", userRouter);
+app.use("/login", loginRouter);
 
 app.listen(port, () => {
     console.log("Server is running on " + port + " port");

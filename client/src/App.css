@@ -186,6 +186,16 @@ input::placeholder {
   width: 88px;
 }
 
+.card, .collapsible {
+  border-bottom: 1px black;
+  margin-bottom: 0px;
+}
+
+.card, .card .card-image, .card .card-image img, .card.horizontal .card-stacked {
+  position: static;
+  box-shadow: none;
+}
+
 .card.horizontal .card-image {
   margin-left: 8px;
   margin-top: 16px;
@@ -226,6 +236,18 @@ input::placeholder {
 	padding: 0;
 	font: inherit;
 	outline: inherit;
+}
+
+.collapsible-body {
+  padding: 8px;
+}
+
+.activity-image {
+  width: 100%;
+}
+
+.itinerary-margin {
+  border-bottom: 12px;
 }
 /* 
 .activity-list {
