@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const db = require('./keys').mongoURI;
 const mongoose = require('mongoose');
+const passport = require('./passport');
 
 const cityRouter = require("./api/cityRouter");
 const itineraryRouter = require("./api/itineraryRouter");
@@ -25,6 +26,9 @@ app.use(
 
 // Initialize Cors
 app.use(cors());
+
+// Initialize Passport
+app.use(passport.initialize());
 
 // Connect to database
 mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })

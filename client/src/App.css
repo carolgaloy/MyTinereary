@@ -189,6 +189,7 @@ input::placeholder {
 .card, .collapsible {
   border-bottom: 1px black;
   margin-bottom: 0px;
+  border-top: 0;
 }
 
 .card, .card .card-image, .card .card-image img, .card.horizontal .card-stacked {

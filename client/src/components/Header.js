@@ -6,7 +6,7 @@ class Header extends Component {
     render() {
         return (
             <div className='row red lighten-1 header'>
-                <Link to='/signin'><div className="col s6"><i className="material-icons header-icons">person</i></div></Link>
+                <Link to='/login'><div className="col s6"><i className="material-icons header-icons">person</i></div></Link>
                 <div className="col s6"><i className="material-icons header-icons right">dehaze</i></div>
             </div>
         );

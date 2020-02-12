@@ -24,7 +24,7 @@ class Itineraries extends Component {
 			.catch(e => 
 				{console.log(e)}
 			);
-	}		
+	}
 
     render() { 
 		const itineraries = this.props.itineraryList;
@@ -41,7 +41,7 @@ class Itineraries extends Component {
 				<div className='extraMargin extraMarginTop extraMarginSides'>
                     <h3 className='city-title'>{this.state.city.name}</h3>
 				  	<ItineraryList itineraries={itineraries} activities={activities}/>
-					<Link to='/cities'>Choose another city</Link>
+					<button><Link to='/cities'>Choose another city</Link></button>
 				</div>
 			);
 		}        

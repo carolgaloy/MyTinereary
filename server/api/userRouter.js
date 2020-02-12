@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
-const key = require("../keys");
-const jwt = require("jsonwebtoken");
+const passport = require("passport");
 
 const userModel = require('../models/userModel');
 
@@ -15,6 +14,20 @@ router.get('/all',
             })
             .catch(err => console.log(err));
     });
+
+// Check if an user already exists and get all the info
+router.get(
+    "/",
+    passport.authenticate("jwt", { session: false }),
+    (req, res) => {
+      userModel
+        .findOne({ _id: req.user.id })
+        .then(user => {
+          res.json(user);
+        })
+        .catch(err => res.status(404).json({ error: "User does not exist!" }));
+    }
+  );
 
 // Add a new user
 router.post('/', (req, res) => {
