@@ -32,6 +32,8 @@ class NewUser extends Component {
 
         this.props.createNewUser(user);
 
+        console.log(this.state);
+
         this.setState({
             name: '',
             email: '',
@@ -50,6 +52,7 @@ class NewUser extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit} className='extraMarginTop extraMarginSides'>
+                <div className='error'>{this.props.errorMessage ? `Oops, ${this.props.errorMessage.error.toLowerCase()}` : null}</div>
                 <label>
                     Name:
                     <input 
@@ -97,7 +100,7 @@ class NewUser extends Component {
                         onChange={this.handleChange}
                         />
                 </label>
-                <input type='submit' value='Submit' />
+                <input type='submit' value='Register' className='btn red waves-effect waves-light submit' />
             </form>
         );
     }
@@ -105,6 +108,7 @@ class NewUser extends Component {
 
 const mapStateToProps = state => {
     return {
+        errorMessage: state.register.error
     };
 };
   

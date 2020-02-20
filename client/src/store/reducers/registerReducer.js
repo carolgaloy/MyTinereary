@@ -1,7 +1,7 @@
 const initialState = {
     payload: [],
     isFetching: false,
-    error: {}
+    error: ''
   };
 
 export default function itineraryReducer(state = initialState, action) {

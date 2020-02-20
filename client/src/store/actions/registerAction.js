@@ -25,14 +25,13 @@ export function sendingUser() {
       dispatch(sendingUser());
       axios.post('./users', user)
       .then(res => {
-          console.log(res);
           if (res.statusText === 'OK'){
               console.log('ok');
               dispatch(registerSuccess(res.data))
           }
       }).catch(e => {
-          console.log(e);
-          dispatch(registerError(e))
+          console.log(e.response.data);
+          dispatch(registerError(e.response.data))
       });
     };
   }

@@ -36,38 +36,37 @@ router.post('/', (req, res) => {
         return res.send("There can't be empty fields");
     }
 
-    //var email = req.body.email;
-    var userExists;
-
     userModel.findOne({email: req.body.email})
         .then(user => {
                 if (user) {
-                    return res.status(403).send("This email already exists in our database");
+                    return res.status(403).send({ error: "This email already exists in our database" });
+
+                } else {
+
+                    const newUser = new userModel({
+                        name: req.body.name,
+                        email: req.body.email,
+                        password: req.body.password,
+                        photo: req.body.photo,
+                    });
+                
+                    bcrypt.hash(req.body.password, 10, function(err, hash) {
+                
+                        if (err) throw err;
+                
+                        newUser.password = hash;
+                
+                        newUser.save()
+                        .then(user => {
+                            res.send(user)
+                        }).catch(err => {
+                            res.send(err)
+                        });
+                
+                    });
                 }
             }
         );
-
-    const newUser = new userModel({
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password,
-        photo: req.body.photo,
-    });
-
-    bcrypt.hash(req.body.password, 10, function(err, hash) {
-
-        if (err) throw err;
-
-        newUser.password = hash;
-
-        newUser.save()
-        .then(user => {
-            res.send(user)
-        }).catch(err => {
-            res.send(err)
-        });
-
-    });
 
 });
 

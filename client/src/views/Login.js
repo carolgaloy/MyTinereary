@@ -61,7 +61,7 @@ class Login extends Component {
                             onChange={this.handleChange}
                             />
                     </label>
-                    <input type='submit' value='Submit' />
+                    <input type='submit' value='Log In' className='submit'/>
                 </form>
                 <p>Not registered? Click <Link to='/signin'>here</Link> to create a new account</p>
             </div>
